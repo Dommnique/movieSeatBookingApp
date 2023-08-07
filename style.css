@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Roboto:wght@300&family=Signika:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(32, 5, 32, 0.925);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0;
+    font-family: 'lato', 'san-serif';
+}
+
+.movie-container{
+    margin: 20px 0;
+}
+
+.movie-container select{
+    margin-left: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 4px 15px;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 15px;
+}
+
+.seat{
+    background-color: #656575;
+    height: 10px;
+    width: 13px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat.selected{
+    background-color: rgb(43, 189, 189);
+}
+
+.seat.occupied{
+    background-color: cornsilk;
+}
+
+.seat:nth-child(2){
+    margin-right: 20px;
+}
+
+.seat:nth-child(6){
+    margin-right: 20px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform:scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase{
+    background: rgba(0, 0, 0, 0.1);
+    color: #777;
+    padding: 5px 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.showcase li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small{
+    margin-left: 2px;
+}
+
+.row{
+    display: flex;
+}
+
+.screen{
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 15px;
+    transform: rotateX(40deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.9);
+}
+
+p.text span{
+    color: rgb(43, 189, 189);;
+}
+
+p.text{
+    margin: 5px 0;
+}
